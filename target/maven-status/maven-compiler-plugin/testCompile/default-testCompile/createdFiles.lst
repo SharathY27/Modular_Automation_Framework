@@ -1,0 +1,3 @@
+base\BaseTest.class
+test\SampleTest.class
+base\BaseTestForParallelExecution.class

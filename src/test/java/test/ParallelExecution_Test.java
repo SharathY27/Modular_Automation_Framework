@@ -28,7 +28,6 @@ public class ParallelExecution_Test extends BaseTestForParallelExecution {
 		driver.get().switchTo().window(currentWindow);
 		driver.get().get("https://demoqa.com/upload-download");
 		driver.get().findElement(By.id("uploadFile")).sendKeys("C:\\Users\\Sharath\\New Workspace\\Framework_Development\\src\\test\\resources\\config.properties");
-		
 	}
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)

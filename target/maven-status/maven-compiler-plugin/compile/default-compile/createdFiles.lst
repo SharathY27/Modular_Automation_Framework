@@ -1,4 +1,6 @@
+utils\Appium_Utility.class
 utils\GlobalVariables.class
 utils\Utilities.class
 utils\RetryAnalyzer.class
 webPages\Demo_QA_Textbox_Page.class
+utils\Appium_DriverOptionsManager.class

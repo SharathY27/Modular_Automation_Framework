@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Sharath\New Workspace\Framework_Development\testng.xml</span>
+                    <span>C:\Users\Sharath\New Workspace\Modular_Automation_Framework\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="test.SampleTest" class="method navigator-link" hash-for-method="testingSelenium">testingSelenium</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="test.Test_With_Sequential_Execution" class="method navigator-link" hash-for-method="dummyTest">dummyTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -122,14 +122,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.SampleTest</span>
+              <span class="class-name">test.Test_With_Sequential_Execution</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testingSelenium">
-                  </a> <!-- testingSelenium -->
-                  <span class="method-name">testingSelenium</span>
+                  <a name="dummyTest">
+                  </a> <!-- dummyTest -->
+                  <span class="method-name">dummyTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,20 +137,20 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sharath\New Workspace\Framework_Development\testng.xml</span>
+            <span class="header-content">C:\Users\Sharath\New Workspace\Modular_Automation_Framework\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.SampleTest&quot;&gt;
+      &lt;class name=&quot;test.Test_With_Sequential_Execution&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;testingSelenium&quot;/&gt;
+          &lt;include name=&quot;dummyTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.SampleTest --&gt;
+      &lt;/class&gt; &lt;!-- test.Test_With_Sequential_Execution --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -192,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testingSelenium')
-data.setCell(0, 2, 'test.SampleTest')
-data.setCell(0, 3, 3);
+data.setCell(0, 1, 'dummyTest')
+data.setCell(0, 2, 'test.Test_With_Sequential_Execution')
+data.setCell(0, 3, 4);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 ms</span>
+              <span class="suite-total-time">Total running time: 4 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -214,15 +214,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">test.SampleTest</span>
+              <span class="ignored-class-name">test.Test_With_Sequential_Execution</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testWithDataFromExcel</span>
+                <span class="ignored-method-name">testingSelenium</span>
                 <br/>
                 <span class="ignored-method-name">testWithDataProvider</span>
+                <br/>
+                <span class="ignored-method-name">testWithDataFromExcel</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -234,43 +236,27 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.SampleTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
+              <div class="chronological-class-name">test.Test_With_Sequential_Execution</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">1155 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">1179 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void test.SampleTest.testingSelenium())</span>
-                <span class="method-start">1195 ms</span>
+                <span class="method-name">beforeMethod(public void test.Test_With_Sequential_Execution.dummyTest())</span>
+                <span class="method-start">1039 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testingSelenium</span>
-                <span class="method-start">242566 ms</span>
+                <span class="method-name">dummyTest</span>
+                <span class="method-start">105378 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=testingSelenium status=SUCCESS method=SampleTest.testingSelenium()[pri:0, instance:...)</span>
-                <span class="method-start">242588 ms</span>
+                <span class="method-name">afterMethod([TestResult name=dummyTest status=SUCCESS method=Test_With_Sequential_Execution.dummyTest()[pri:0, i...)</span>
+                <span class="method-start">105386 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">274722 ms</span>
-              </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">274723 ms</span>
+                <span class="method-start">123700 ms</span>
               </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">276713 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

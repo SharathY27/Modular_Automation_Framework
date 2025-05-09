@@ -1,3 +1,7 @@
+test\Test_With_Sequential_Execution.class
+test\ParallelExecution_Test.class
+base\BaseTestForMobileAutomation.class
+base\Singleton_Driver.class
 base\BaseTest.class
-test\SampleTest.class
+test\Mobile_Appium_Test.class
 base\BaseTestForParallelExecution.class

@@ -51,7 +51,7 @@ public class Test_With_Sequential_Execution extends BaseTest {
 		obj.enterEmail(email);
 	}
 	
-	@Test(invocationCount = 2)
+	@Test()
 	public void dummyTest() {
 		System.out.println(driver);
 	}

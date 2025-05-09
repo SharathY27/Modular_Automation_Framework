@@ -33,14 +33,15 @@ public class Singleton_Driver {
 			case "chrome":
 				ChromeOptions chromeOptions = new ChromeOptions();
 
-				// Uncomment below line if you want headless mode
-				// chromeOptions.addArguments("--headless=new");
+				// ✅ Enable headless mode for CI
+				chromeOptions.addArguments("--headless=new");
 
-				// Important for CI (GitHub Actions, etc.)
+				// Required in most CI environments
 				chromeOptions.addArguments("--no-sandbox");
 				chromeOptions.addArguments("--disable-dev-shm-usage");
+				chromeOptions.addArguments("--disable-gpu");
 
-				// Fix: use unique user-data-dir
+				// Unique user data dir (optional when headless)
 				String uniqueUserDir = System.getProperty("java.io.tmpdir") + File.separator + "chrome-profile-" + System.currentTimeMillis();
 				chromeOptions.addArguments("--user-data-dir=" + uniqueUserDir);
 

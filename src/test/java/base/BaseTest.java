@@ -1,6 +1,7 @@
 package base;
 
 import java.io.File;
+import java.io.InputStream;
 import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriver;
@@ -32,8 +33,12 @@ public class BaseTest {
 	@BeforeTest
 	public void beforeTest() {// Initializing Reports
 		GlobalVariables.loadProperties();
+		File reportDir = new File(System.getProperty("user.dir") + File.separator + "target" + File.separator + "Reports");
+		if (!reportDir.exists()) {
+		    reportDir.mkdirs();  // Prevents FileNotFoundException
+		}
 		extentHtmlReporter = new ExtentHtmlReporter(
-				File.separator + "Reports" + File.separator + "Automation_Report.html");
+				reportDir + File.separator + "Automation_Report.html");
 		extentHtmlReporter.config().setEncoding("utf-8");
 		extentHtmlReporter.config().setDocumentTitle("Automation Report by Sharath");
 		extentHtmlReporter.config().setReportName("Automation Results");

@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: '*/feature/*',
+                git branch: 'feature/jenkins_setup',
                     url: 'https://github.com/SharathY27/Modular_Automation_Framework.git'
             }
         }

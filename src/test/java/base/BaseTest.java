@@ -52,7 +52,7 @@ public class BaseTest {
 		driver.get(GlobalVariables.url);
 	}
 
-	@AfterMethod
+	@AfterMethod // Attaching to report
 	public void afterMethod(ITestResult result) {
 		if (result.getStatus() == ITestResult.SUCCESS) {
 			Markup markup = MarkupHelper.createLabel("Test case " + result.getMethod().getMethodName() + "Passed",

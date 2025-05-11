@@ -66,7 +66,7 @@ public class BaseTest {
 		Singleton_Driver.quitDriver();
 	}
 
-	@AfterTest
+	@AfterTest // Flushing the report
 	public void afterTest() {
 		extentReports.flush();
 	}

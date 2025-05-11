@@ -51,7 +51,6 @@ public class BaseTest {
 		driver = Singleton_Driver.getSingletonDriver();
 		driver.manage().window().maximize();
 		driver.get(GlobalVariables.url);
-
 	}
 
 	@AfterMethod
